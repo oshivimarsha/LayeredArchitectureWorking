@@ -220,7 +220,7 @@ public class ManageItemsFormController {
                 pstm.setString(4, code);
                 pstm.executeUpdate();*/
 
-                ItemDTO itemDTO = new ItemDTO(description, code, unitPrice, qtyOnHand);
+                ItemDTO itemDTO = new ItemDTO(code,description,unitPrice,qtyOnHand);
                 itemDAO.updateItem(itemDTO);
 
                 ItemTM selectedItem = tblItems.getSelectionModel().getSelectedItem();
